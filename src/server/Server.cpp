@@ -10,12 +10,12 @@ int main() {
 	io_context io;
 	ip::tcp::acceptor acceptor(io, ip::tcp::endpoint(ip::tcp::v4(), 1234));
 
-	cout << "Сервер запущен на порту 1234...\n";
+	cout << "РЎРµСЂРІРµСЂ Р·Р°РїСѓС‰РµРЅ РЅР° РїРѕСЂС‚Сѓ 1234...\n";
 
 	while (true) {
 		ip::tcp::socket socket(io);
 		acceptor.accept(socket);
-		cout << "Соединение установлено\n";
+		cout << "РЎРѕРµРґРёРЅРµРЅРёРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ\n";
 
 		char data[256];
 		while (true) {
@@ -24,8 +24,6 @@ int main() {
 		}
 
 	}
-
-        cout << "Все пакеты получены\n" << endl;
 
 	return 0;
 }
